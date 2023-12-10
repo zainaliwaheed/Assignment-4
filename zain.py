@@ -1,9 +1,8 @@
 # Importing the necessary modules from Flask
-import flask import render_template
-import flask
+from flask import Flask, render_template
 
 # Creating a Flask web application
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 # Define a route for the root URL
 @app.route('/')
@@ -12,4 +11,4 @@ def index():
 
 # Run the app if this script is executed
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)  # Add debug=True for development purposes
